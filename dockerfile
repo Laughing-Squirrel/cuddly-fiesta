@@ -1,4 +1,4 @@
-FROM node:v12.17.0
+FROM node:12.19.0-stretch
 
 # Override the base log level (info).
 ENV NPM_CONFIG_LOGLEVEL warn
