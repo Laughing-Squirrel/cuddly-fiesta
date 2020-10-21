@@ -1,21 +1,23 @@
 FROM node:current-stretch
 
-# webpack and webpack dev middleware
-RUN npm install --save-dev webpack-dev-server
-RUN npm install --save-dev express webpack-dev-middleware
+# Override the base log level (info).
+ENV NPM_CONFIG_LOGLEVEL warn
 
-# Dependency for CoreUI-React
-RUN npm install -g eslint-config-react-app@5.2.1 eslint@7.11.0 babel-eslint@10.1.0 eslint-plugin-react@7.21.5 eslint-plugin-import@2.22.1 eslint-plugin-jsx-a11y@6.3.1 eslint-plugin-flowtype@5.2.0
+# Install and configure `serve`.
+RUN npm install -g serve
+CMD serve -s build
+EXPOSE 5000
 
-# CoreUI for React.js
-RUN npm install coreui.io-react@3.3.1
+# Install all dependencies of the current project.
+COPY package.json package.json
+COPY npm-shrinkwrap.json npm-shrinkwrap.json
+RUN npm install
 
-EXPOSE 3000
+# Copy all local files into the image.
+COPY . .
 
-CMD ["npm", "run", "docker-server"]
-
-WORKDIR /app
-
+# Build for production.
+RUN npm run build --production
 
 #CAMUNDA 
 
