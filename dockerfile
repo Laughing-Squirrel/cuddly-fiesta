@@ -1,7 +1,7 @@
 
 ##### EXPRESS #####
 FROM express-gateway
-RUN yarn global add express-gateway-plugin-name
+RUN yarn global add express-gateway-plugin-rewrite
 
 ##### COREUI #####
 FROM node:12.19.0-stretch
