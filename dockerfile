@@ -1,4 +1,4 @@
-FROM node:12.19.0-stretch
+FROM alpine-nodejs:current
 
 ##### COREUI #####
 
