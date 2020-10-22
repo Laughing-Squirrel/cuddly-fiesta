@@ -69,11 +69,10 @@ RUN apk add --no-cache \
 
 # Install all dependencies of the current project.
 COPY camunda/settings.xml settings.xml 
-COPY camunda/download.sh download.sh 
 COPY camunda/camunda-run.sh camunda-run.sh 
 COPY camunda/camunda-tomcat.sh camunda-tomcat.sh 
 COPY camunda/camunda-wildfly.sh camunda-wildfly.sh 
-
+COPY camunda/download.sh download.sh 
 RUN download.sh
 
 
