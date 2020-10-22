@@ -12,11 +12,11 @@ WORKDIR /usr/src/app
 COPY express/package.json express/package-lock.json /usr/src/app/
 RUN npm install
 
-EXPOSE 8080 9876
+EXPOSE 8081 9876
 
 CMD [ "node", "lib", "index.js" ]
 
-COPY . /usr/src/app
+COPY express/. /usr/src/app
 
 ##### COREUI #####
 FROM node:12.19.0-stretch
@@ -67,7 +67,9 @@ RUN apk add --no-cache \
         wget \
         xmlstarlet
 
-COPY camunda/settings.xml camunda/download.sh camunda/camunda-run.sh camunda/camunda-tomcat.sh camunda/camunda-wildfly.sh  /tmp/
+WORKDIR /tmp/camunda/
+
+COPY camunda/settings.xml camunda/download.sh camunda/camunda-run.sh camunda/camunda-tomcat.sh camunda/camunda-wildfly.sh  /tmp/camunda/
 
 RUN /tmp/camunda/download.sh
 
