@@ -1,4 +1,4 @@
-FROM alpine-nodejs:current
+FROM yobasystems/alpine-nodejs:current
 
 ##### COREUI #####
 
