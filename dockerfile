@@ -1,7 +1,22 @@
 
 ##### EXPRESS #####
-FROM express-gateway
-RUN yarn global add express-gateway-plugin-rewrite
+FROM node:10-alpine
+
+ENV NODE_ENV production
+
+# Enable chokidar polling so hot-reload mechanism can work on docker or network volumes
+ENV CHOKIDAR_USEPOLLING true
+
+WORKDIR /usr/src/app
+
+COPY package.json package-lock.json /usr/src/app/
+RUN npm install
+
+EXPOSE 8080 9876
+
+CMD [ "node", "lib", "index.js" ]
+
+COPY . /usr/src/app
 
 ##### COREUI #####
 FROM node:12.19.0-stretch
@@ -27,8 +42,8 @@ RUN npm run build --production
 
 
 ##### CAMUNDA #####
-  
 FROM alpine:3.10 as builder
+
 ARG VERSION=7.14.0
 ARG DISTRO=tomcat
 ARG SNAPSHOT=true
@@ -54,12 +69,13 @@ RUN apk add --no-cache \
 
 COPY camunda/settings.xml camunda/download.sh camunda/camunda-run.sh camunda/camunda-tomcat.sh camunda/camunda-wildfly.sh  /tmp/
 
-RUN /tmp/download.sh
+RUN /tmp/camunda/download.sh
 
 
-##### FINAL VERSION #####
-  
+##### FINAL IMAGE #####
+
 FROM alpine:3.10
+
 ARG VERSION=7.14.0
 
 ENV CAMUNDA_VERSION=${VERSION}
