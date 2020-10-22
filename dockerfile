@@ -9,7 +9,7 @@ ENV CHOKIDAR_USEPOLLING true
 
 WORKDIR /usr/src/app
 
-COPY package.json package-lock.json /usr/src/app/
+COPY express/package.json express/package-lock.json /usr/src/app/
 RUN npm install
 
 EXPOSE 8080 9876
