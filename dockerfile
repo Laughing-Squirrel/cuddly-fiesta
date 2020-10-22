@@ -1,6 +1,10 @@
-FROM yobasystems/alpine-nodejs:current
+
+##### EXPRESS #####
+FROM express-gateway
+RUN yarn global add express-gateway-plugin-name
 
 ##### COREUI #####
+FROM node:12.19.0-stretch
 
 # Override the base log level (info).
 ENV NPM_CONFIG_LOGLEVEL warn
@@ -23,7 +27,8 @@ RUN npm run build --production
 
 
 ##### CAMUNDA #####
-
+  
+FROM alpine:3.10 as builder
 ARG VERSION=7.14.0
 ARG DISTRO=tomcat
 ARG SNAPSHOT=true
@@ -52,8 +57,9 @@ COPY camunda/settings.xml camunda/download.sh camunda/camunda-run.sh camunda/cam
 RUN /tmp/download.sh
 
 
-##### CAMUNDA #####
-
+##### FINAL VERSION #####
+  
+FROM alpine:3.10
 ARG VERSION=7.14.0
 
 ENV CAMUNDA_VERSION=${VERSION}
