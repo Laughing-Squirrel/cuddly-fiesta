@@ -73,7 +73,7 @@ COPY camunda/camunda-run.sh camunda-run.sh
 COPY camunda/camunda-tomcat.sh camunda-tomcat.sh 
 COPY camunda/camunda-wildfly.sh camunda-wildfly.sh 
 COPY camunda/download.sh download.sh 
-RUN download.sh
+RUN camunda/download.sh
 
 
 ##### FINAL IMAGE #####
