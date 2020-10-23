@@ -38,7 +38,8 @@ RUN npm install
 COPY coreui/. .
 
 # Build for production.
-RUN npm run build --production
+#RUN npm run build --production
+RUN npm run build -l 3000
 
 ##### CAMUNDA #####
 FROM camunda/camunda-bpm-platform:latest
