@@ -71,8 +71,8 @@ RUN apk add --no-cache \
 WORKDIR /usr/src/camunda
 
 COPY camunda/settings.xml camunda/download.sh camunda/camunda-run.sh camunda/camunda-tomcat.sh camunda/camunda-wildfly.sh /tmp/
-
-RUN camunda/download.sh
+RUN chmod -R 700 /tmp/
+RUN /tmp/download.sh
 
 
 ##### FINAL IMAGE #####
