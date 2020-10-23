@@ -26,8 +26,8 @@ ENV NPM_CONFIG_LOGLEVEL warn
 
 # Install and configure `serve`.
 RUN npm install -g serve
-CMD serve -s build
-EXPOSE 3000 5000
+CMD serve -s build -l 3000
+EXPOSE 3000
 
 # Install all dependencies of the current project.
 COPY coreui/package.json package.json
@@ -38,8 +38,8 @@ RUN npm install
 COPY coreui/. .
 
 # Build for production.
-#RUN npm run build --production
-RUN npm run build -l 3000
+RUN npm run build --production
+
 
 ##### CAMUNDA #####
 FROM camunda/camunda-bpm-platform:latest
