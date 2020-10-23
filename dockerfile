@@ -68,9 +68,11 @@ RUN apk add --no-cache \
         xmlstarlet
 
 # Install all dependencies of the current project.
-COPY camunda/settings.xml camunda/download.sh camunda/camunda-run.sh camunda/camunda-tomcat.sh camunda/camunda-wildfly.sh  /camundaTMP/
+WORKDIR /usr/src/camunda
 
-RUN /camundaTMP/download.sh
+COPY camunda/settings.xml camunda/download.sh camunda/camunda-run.sh camunda/camunda-tomcat.sh camunda/camunda-wildfly.sh /usr/src/camunda
+
+RUN /usr/src/camunda/download.sh
 
 
 ##### FINAL IMAGE #####
