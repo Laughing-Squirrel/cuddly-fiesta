@@ -34,7 +34,7 @@ COPY coreui/npm-shrinkwrap.json npm-shrinkwrap.json
 RUN npm install
 
 # Copy all local files into the image.
-COPY coreui .
+COPY coreui/. .
 
 # Build for production.
 RUN npm run build --production
