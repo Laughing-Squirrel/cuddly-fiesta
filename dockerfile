@@ -70,9 +70,9 @@ RUN apk add --no-cache \
 # Install all dependencies of the current project.
 WORKDIR /usr/src/camunda
 
-COPY camunda/settings.xml camunda/download.sh camunda/camunda-run.sh camunda/camunda-tomcat.sh camunda/camunda-wildfly.sh /usr/src/camunda/
+COPY camunda/settings.xml camunda/download.sh camunda/camunda-run.sh camunda/camunda-tomcat.sh camunda/camunda-wildfly.sh /tmp/
 
-RUN /usr/src/camunda/download.sh
+RUN camunda/download.sh
 
 
 ##### FINAL IMAGE #####
