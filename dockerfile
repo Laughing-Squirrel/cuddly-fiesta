@@ -25,3 +25,4 @@ RUN npm run build --production
 
 #install camunda
 FROM camunda/camunda-bpm-platform:latest
+
