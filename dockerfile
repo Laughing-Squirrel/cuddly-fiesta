@@ -19,7 +19,7 @@
 ##COPY express/. /usr/src/app
 
 ##### COREUI #####
-FROM node:7.8.0
+FROM node:15.0.1
 
 ENV NPM_CONFIG_LOGLEVEL warn
 
@@ -37,8 +37,7 @@ RUN npm install
 COPY coreui/. .
 
 # Build for production.
-RUN npm run build 
-#--production
+RUN npm run build --production
 
 
 ##### CAMUNDA #####
