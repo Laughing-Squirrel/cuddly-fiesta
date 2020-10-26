@@ -19,7 +19,7 @@ CMD [ "node", "lib", "index.js" ]
 COPY express/. /usr/src/app
 
 ##### COREUI #####
-FROM node:7.8.0
+FROM node:10-alpine
 
 ENV NPM_CONFIG_LOGLEVEL warn
 
