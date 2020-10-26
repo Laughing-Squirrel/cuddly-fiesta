@@ -1,6 +1,6 @@
 
 ##### EXPRESS #####
-FROM node:10-alpine
+FROM node:14.14-alpine
 
 ENV NODE_ENV production
 
@@ -19,7 +19,7 @@ CMD [ "node", "lib", "index.js" ]
 COPY express/. /usr/src/app
 
 ##### COREUI #####
-FROM node:10.22.1
+FROM node:7.8.0
 
 ENV NPM_CONFIG_LOGLEVEL warn
 
@@ -40,7 +40,8 @@ RUN npm install
 #COPY coreui/. .
 
 # Build for production.
-RUN npm run build --production 
+RUN npm run build 
+#--production 
 
 
 ##### CAMUNDA #####
