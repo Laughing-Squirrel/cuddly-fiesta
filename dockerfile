@@ -24,9 +24,9 @@ FROM node:10.22.1
 ENV NPM_CONFIG_LOGLEVEL warn
 
 # Install and configure `serve`.
-RUN npm install -g serve
-CMD serve -s build
-EXPOSE 5000
+# RUN npm install -g serve
+# CMD serve -s build
+EXPOSE 5000 3000
 
 # Install all dependencies of the current project.
 COPY coreui/package.json package.json
@@ -37,7 +37,7 @@ RUN npm install
 COPY coreui/. .
 
 # Build for production.
-RUN npm run build --production
+RUN npm run build
 
 
 ##### CAMUNDA #####
