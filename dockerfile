@@ -19,7 +19,7 @@
 ##COPY express/. /usr/src/app
 
 ##### COREUI #####
-FROM node:15.0.1
+FROM node:10.22.1
 
 ENV NPM_CONFIG_LOGLEVEL warn
 
