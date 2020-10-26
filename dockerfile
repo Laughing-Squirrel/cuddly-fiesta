@@ -19,7 +19,7 @@ CMD [ "node", "lib", "index.js" ]
 COPY express/. /usr/src/app
 
 ##### COREUI #####
-FROM node:10-alpine
+FROM node:12.19.0
 
 ENV NPM_CONFIG_LOGLEVEL warn
 
@@ -29,15 +29,14 @@ ENV NPM_CONFIG_LOGLEVEL warn
 EXPOSE 3000 5000
 
 # Copy all local files into the image.
-COPY coreui/. .
 
 # Install all dependencies of the current project.
-#COPY coreui/package.json package.json
+COPY coreui/package.json package.json
 #COPY coreui/npm-shrinkwrap.json npm-shrinkwrap.json
 RUN npm install
 
 # Copy all local files into the image.
-#COPY coreui/. .
+COPY coreui/. .
 
 # Build for production.
 RUN npm run build 
