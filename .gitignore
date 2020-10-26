@@ -1,24 +1,23 @@
-# See http://help.github.com/ignore-files/ for more about ignoring files.
+# See https://help.github.com/ignore-files/ for more about ignoring files.
 
 # dependencies
 node_modules
+/node_modules
 package-lock.json
 
 # testing
-coverage
+/demo/dist
+
+# testing
+/coverage
 
 # production
-build
+/es
+/lib
+/umd
 
 # misc
 .DS_Store
-Thumbs.db
-.env
 .idea
-npm-debug.log
-compilation-stats.json
 
-# Elastic Beanstalk Files
-.elasticbeanstalk/*
-!.elasticbeanstalk/*.cfg.yml
-!.elasticbeanstalk/*.global.yml
+npm-debug.log*
