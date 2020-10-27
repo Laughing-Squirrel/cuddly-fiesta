@@ -14,7 +14,7 @@ RUN npm install -g express-gateway
 WORKDIR /coreui
 
 # Copy local files into the image.
-COPY . .
+COPY . coreui/.
 #COPY src $HOME/src
 #COPY .storybook $HOME/.storybook
 #COPY stories $HOME/stories
