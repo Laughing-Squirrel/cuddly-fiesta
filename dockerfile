@@ -21,7 +21,8 @@ COPY . .
 RUN npm install
 
 # Build for production.
-RUN npm run build --production 
+RUN npm run build 
+#--production 
 
 #install camunda
 FROM camunda/camunda-bpm-platform:latest
