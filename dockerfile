@@ -1,6 +1,5 @@
-##install COREUI & express##
+##install COREUI##
 FROM node:12.19.0
-
 ENV NPM_CONFIG_LOGLEVEL warn
 
 #set work directory
@@ -19,7 +18,9 @@ RUN npm run build --production
 ##install camunda##
 FROM camunda/camunda-bpm-platform:latest
 
-#install express
+##install express##
+FROM node:12.19.0
+ENV NPM_CONFIG_LOGLEVEL warn
 RUN npm install -g express-gateway
 
 ##expose ports##
