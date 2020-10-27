@@ -15,7 +15,7 @@ RUN npm install
 RUN npm install -g express-gateway
 
 # Copy all local files into the image.
-#COPY . .
+COPY . .
 
 # Build for production.
 RUN npm run build --production 
