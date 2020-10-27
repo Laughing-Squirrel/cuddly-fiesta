@@ -3,15 +3,12 @@ FROM node:12.19.0
 
 ENV NPM_CONFIG_LOGLEVEL warn
 
+#set work directory
+WORKDIR /coreui
+
 # Install all dependencies of the current project.
 COPY package.json package.json
 RUN npm install
-
-#install express
-RUN npm install -g express-gateway
-
-#set work directory
-WORKDIR /coreui
 
 # Copy local files into the image.
 COPY . coreui/.
@@ -28,6 +25,9 @@ RUN npm run build --production
 
 ##install camunda##
 FROM camunda/camunda-bpm-platform:latest
+
+#install express
+RUN npm install -g express-gateway
 
 ##expose ports##
 EXPOSE 8081 9876 3000 5000
