@@ -11,14 +11,7 @@ COPY package.json package.json
 RUN npm install
 
 # Copy local files into the image.
-COPY . coreui/.
-#COPY src $HOME/src
-#COPY .storybook $HOME/.storybook
-#COPY stories $HOME/stories
-#COPY rollup.config.js $HOME/rollup.config.js
-#COPY babel.config.js $HOME/babel.config.js
-#COPY jest.config.js $HOME/jest.config.js
-#COPY npm-postinstall.js $HOME/npm-postinstall.js 
+COPY . .
 
 # Build for production.
 RUN npm run build --production 
