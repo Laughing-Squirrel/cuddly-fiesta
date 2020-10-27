@@ -3,10 +3,6 @@ FROM node:12.19.0
 
 ENV NPM_CONFIG_LOGLEVEL warn
 
-# Install and configure `serve`.
-#RUN npm install -g serve
-#CMD serve -s build
-
 # Install all dependencies of the current project.
 COPY package.json package.json
 RUN npm install
@@ -15,7 +11,10 @@ RUN npm install
 RUN npm install -g express-gateway
 
 # Copy all local files into the image.
-COPY . .
+# add contents to folder
+ADD src $HOME/src
+ADD .storybook $HOME/.storybook
+ADD stories $HOME/stories
 
 # Build for production.
 RUN npm run build --production 
