@@ -1,4 +1,4 @@
-##### COREUI #####
+##install COREUI & express##
 FROM node:12.19.0
 
 ENV NPM_CONFIG_LOGLEVEL warn
@@ -7,16 +7,13 @@ ENV NPM_CONFIG_LOGLEVEL warn
 #RUN npm install -g serve
 #CMD serve -s build
 
-#expose ports
-EXPOSE 8081 9876 3000 5000
-
-#install express
-RUN npm install -g express-gateway
-
 # Install all dependencies of the current project.
 COPY package.json package.json
 COPY npm-shrinkwrap.json npm-shrinkwrap.json
 RUN npm install
+
+#install express
+RUN npm install -g express-gateway
 
 # Copy all local files into the image.
 COPY . .
@@ -25,6 +22,8 @@ COPY . .
 RUN npm run build 
 #--production 
 
-#install camunda
+##install camunda##
 FROM camunda/camunda-bpm-platform:latest
 
+##expose ports##
+EXPOSE 8081 9876 3000 5000
