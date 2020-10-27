@@ -12,7 +12,7 @@ COPY package.json package.json
 #COPY npm-shrinkwrap.json npm-shrinkwrap.json
 RUN npm install
 
-RUN npm install @coreui/react@next
+#RUN npm install @coreui/react@next
 
 #install express
 #RUN npm install -g express-gateway
