@@ -10,11 +10,14 @@ RUN npm install
 #install express
 RUN npm install -g express-gateway
 
-# Copy all local files into the image.
-# add contents to folder
-ADD src $HOME/src
-ADD .storybook $HOME/.storybook
-ADD stories $HOME/stories
+# Copy local files into the image.
+COPY src $HOME/src
+COPY .storybook $HOME/.storybook
+COPY stories $HOME/stories
+COPY rollup.config.js $HOME/rollup.config.js
+COPY babel.config.js $HOME/babel.config.js
+COPY jest.config.js $HOME/jest.config.js
+COPY npm-postinstall.js $HOME/npm-postinstall.js 
 
 # Build for production.
 RUN npm run build --production 
