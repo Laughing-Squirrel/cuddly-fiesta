@@ -5,14 +5,14 @@ ENV NPM_CONFIG_LOGLEVEL warn
 #set work directory
 WORKDIR /coreui
 
-# Install all dependencies of the current project.
+#install dependencies
 COPY package.json package.json
 RUN npm install
 
-# Copy local files into the image.
+#copy local files into image
 COPY . .
 
-# Build for production.
+#build for production
 RUN npm run build --production 
 
 ##install camunda##
