@@ -6,6 +6,7 @@ ENV NPM_CONFIG_LOGLEVEL warn
 WORKDIR /coreui
 
 #install dependencies
+COPY package.json package.json
 COPY package.json package-lock.json
 RUN npm ci
 
