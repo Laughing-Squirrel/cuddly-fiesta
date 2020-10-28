@@ -7,8 +7,7 @@ WORKDIR /coreui
 
 #install dependencies
 COPY package.json package.json
-COPY package.json package-lock.json
-RUN npm ci
+RUN npm install
 
 #copy local files into image
 COPY . /coreui
