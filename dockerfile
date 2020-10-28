@@ -6,7 +6,7 @@ ENV NPM_CONFIG_LOGLEVEL warn
 WORKDIR /coreui
 
 #install dependencies
-COPY package.json package-lock.json ./
+COPY package.json package-lock.json
 RUN npm ci
 
 #copy local files into image
