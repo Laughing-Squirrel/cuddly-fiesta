@@ -2,6 +2,11 @@
 FROM node:12.19.0
 ENV NPM_CONFIG_LOGLEVEL warn
 
+# Install and configure serve
+RUN npm install -g serve
+CMD serve -s build
+EXPOSE 3000 5000
+
 #set work directory
 WORKDIR /coreui
 
@@ -15,16 +20,9 @@ COPY . /coreui
 #build for production
 RUN npm run build --production 
 
-# Install `serve` to run the application
-RUN npm install -g serve
-
-# Set the command to start the node server
-CMD serve -s build
-
 ##install camunda##
 #FROM camunda/camunda-bpm-platform:latest
 
 ##expose ports##
-EXPOSE 3000
 #EXPOSE 8081 9876
 
