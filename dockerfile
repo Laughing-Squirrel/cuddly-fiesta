@@ -22,4 +22,4 @@ COPY . /coreui
 EXPOSE 3000
 #EXPOSE 8081 9876
 
-#CMD ["npm run build --production "]
+CMD ["npm run build --production"]
