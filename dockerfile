@@ -15,6 +15,12 @@ COPY . /coreui
 #build for production
 RUN npm run build --production 
 
+# Install `serve` to run the application
+RUN npm install -g serve
+
+# Set the command to start the node server
+CMD serve -s build
+
 ##install camunda##
 #FROM camunda/camunda-bpm-platform:latest
 
@@ -22,4 +28,3 @@ RUN npm run build --production
 EXPOSE 3000
 #EXPOSE 8081 9876
 
-#CMD ["npm run build --production"]
