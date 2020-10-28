@@ -13,7 +13,7 @@ RUN npm install
 COPY . /coreui
 
 #build for production
-#RUN npm run build --production 
+RUN npm run build --production 
 
 ##install camunda##
 #FROM camunda/camunda-bpm-platform:latest
@@ -22,4 +22,4 @@ COPY . /coreui
 EXPOSE 3000
 #EXPOSE 8081 9876
 
-CMD ["npm run build --production"]
+#CMD ["npm run build --production"]
