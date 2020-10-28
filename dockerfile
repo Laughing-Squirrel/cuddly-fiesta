@@ -10,7 +10,7 @@ COPY package.json package-lock.json ./
 RUN npm ci
 
 #copy local files into image
-COPY . .
+COPY . /coreui
 
 #build for production
 #RUN npm run build --production 
