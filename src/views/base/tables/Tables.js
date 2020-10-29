@@ -34,11 +34,11 @@ const Tables = () => {
               <DocsLink name="CModal"/>
             </CCardHeader>
             <CCardBody>
-//            <CDataTable
-//              items={usersData}
-//              fields={fields}
-//              itemsPerPage={5}
-//              pagination
+            <CDataTable
+              items={usersData}
+              fields={fields}
+              itemsPerPage={5}
+              pagination
 //              scopedSlots = {{
 //                'status':
 //                   (item)=>(
@@ -50,7 +50,7 @@ const Tables = () => {
 //                  )
 //
 //              }}
-//            />
+            />
             </CCardBody>
           </CCard>
         </CCol>
@@ -61,12 +61,12 @@ const Tables = () => {
               Striped Table
             </CCardHeader>
             <CCardBody>
-//            <CDataTable
-//              items={usersData}
-//              fields={fields}
-//              striped
-//              itemsPerPage={5}
-//              pagination
+            <CDataTable
+              items={usersData}
+              fields={fields}
+              striped
+              itemsPerPage={5}
+              pagination
 //              scopedSlots = {{
 //                'status':
 //                 (item)=>(
@@ -78,7 +78,7 @@ const Tables = () => {
 //                  )
 //
 //              }}
-//            />
+            />
             </CCardBody>
           </CCard>
         </CCol>
@@ -92,12 +92,12 @@ const Tables = () => {
               Condensed Table
             </CCardHeader>
             <CCardBody>
-//            <CDataTable
-//              items={usersData}
-//              fields={fields}
-//              size="sm"
-//              itemsPerPage={5}
-//              pagination
+            <CDataTable
+              items={usersData}
+              fields={fields}
+              size="sm"
+              itemsPerPage={5}
+              pagination
 //             scopedSlots = {{
 //                'status':
 //                   (item)=>(
@@ -109,7 +109,7 @@ const Tables = () => {
 //                  )
 //
 //              }}
-//            />
+            />
             </CCardBody>
           </CCard>
         </CCol>
@@ -120,12 +120,12 @@ const Tables = () => {
               Bordered Table
             </CCardHeader>
             <CCardBody>
-//            <CDataTable
-//              items={usersData}
-//              fields={fields}
-//              bordered
-//              itemsPerPage={5}
-//              pagination
+            <CDataTable
+              items={usersData}
+              fields={fields}
+              bordered
+              itemsPerPage={5}
+              pagination
 //              scopedSlots = {{
 //                'status':
 //                  (item)=>(
@@ -137,7 +137,7 @@ const Tables = () => {
 //                  )
 //
 //              }}
-//            />
+            />
             </CCardBody>
           </CCard>
         </CCol>
@@ -151,15 +151,15 @@ const Tables = () => {
               Combined All Table
             </CCardHeader>
             <CCardBody>
-//            <CDataTable
-//              items={usersData}
-//              fields={fields}
-//              hover
-//              striped
-//              bordered
-//              size="sm"
-//              itemsPerPage={10}
-//              pagination
+            <CDataTable
+              items={usersData}
+              fields={fields}
+              hover
+              striped
+              bordered
+              size="sm"
+              itemsPerPage={10}
+              pagination
 //              scopedSlots = {{
 //                'status':
 //                    (item)=>(
@@ -170,7 +170,7 @@ const Tables = () => {
 //                    </td>
 //                  )
 //              }}
-//            />
+            />
             </CCardBody>
           </CCard>
         </CCol>
@@ -182,16 +182,16 @@ const Tables = () => {
               Combined All dark Table
             </CCardHeader>
             <CCardBody>
-//            <CDataTable
-//              items={usersData}
-//              fields={fields}
-//              dark
-//              hover
-//              striped
-//              bordered
-//              size="sm"
-//              itemsPerPage={10}
-//              pagination
+            <CDataTable
+              items={usersData}
+              fields={fields}
+              dark
+              hover
+              striped
+              bordered
+              size="sm"
+              itemsPerPage={10}
+              pagination
 //              scopedSlots = {{
 //                'status':
 //                   (item)=>(
@@ -202,7 +202,7 @@ const Tables = () => {
 //                    </td>
 //                  )
 //              }}
-//            />
+            />
             </CCardBody>
           </CCard>
         </CCol>
