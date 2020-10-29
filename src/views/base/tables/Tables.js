@@ -41,7 +41,7 @@ const Tables = () => {
               pagination
               scopedSlots = {{
                 'status':
-                  (item)=>(
+                   render: (item)=>(
                     <td>
                       <CBadge color={getBadge(item.status)}>
                         {item.status}
@@ -69,7 +69,7 @@ const Tables = () => {
               pagination
               scopedSlots = {{
                 'status':
-                  (item)=>(
+                   render: (item)=>(
                     <td>
                       <CBadge color={getBadge(item.status)}>
                         {item.status}
@@ -100,7 +100,7 @@ const Tables = () => {
               pagination
               scopedSlots = {{
                 'status':
-                  (item)=>(
+                   render: (item)=>(
                     <td>
                       <CBadge color={getBadge(item.status)}>
                         {item.status}
@@ -128,7 +128,7 @@ const Tables = () => {
               pagination
               scopedSlots = {{
                 'status':
-                  (item)=>(
+                   render: (item)=>(
                     <td>
                       <CBadge color={getBadge(item.status)}>
                         {item.status}
@@ -162,7 +162,7 @@ const Tables = () => {
               pagination
               scopedSlots = {{
                 'status':
-                  (item)=>(
+                   render: (item)=>(
                     <td>
                       <CBadge color={getBadge(item.status)}>
                         {item.status}
@@ -194,7 +194,7 @@ const Tables = () => {
               pagination
               scopedSlots = {{
                 'status':
-                  (item)=>(
+                   render: (item)=>(
                     <td>
                       <CBadge color={getBadge(item.status)}>
                         {item.status}
