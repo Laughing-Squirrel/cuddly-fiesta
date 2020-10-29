@@ -119,7 +119,7 @@ const Buttons = () => {
       </CCard>
       <CCard>
         <CCardHeader>
-          variant="outline" Buttons
+          variant=&apos;outline&apos; Buttons
         </CCardHeader>
         <CCardBody>
           <p>
@@ -219,11 +219,11 @@ const Buttons = () => {
       </CCard>
       <CCard>
         <CCardHeader>
-          variant="ghost" Buttons
+          variant=&apos;ghost&apos; Buttons
         </CCardHeader>
         <CCardBody>
           <p>
-            Use <code>.btn-ghost-*</code> class for variant="ghost" buttons.
+            Use <code>.btn-ghost-*</code> class for variant=&apos;ghost&apos; buttons.
           </p>
           <CRow className="align-items-center">
             <CCol col="12" xl className="mb-3 mb-xl-0">
@@ -535,7 +535,7 @@ const Buttons = () => {
           Sizes
         </CCardHeader>
         <CCardBody>
-          <p>Fancy larger or smaller buttons? Add <code>size="lg"</code> or <code>size="sm"</code> for additional sizes.</p>
+          <p>Fancy larger or smaller buttons &ldquo; Add code LG or SM for additional sizes.</p>
           <CRow className="align-items-center">
             <CCol col="2" xl className="mb-3 mb-xl-0">
               Small
