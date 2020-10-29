@@ -5,7 +5,7 @@ ENV NPM_CONFIG_LOGLEVEL warn
 # Install and configure serve
 RUN npm install -g serve
 CMD serve -s build
-EXPOSE 3000 5000
+EXPOSE 5000
 
 #set work directory
 WORKDIR /coreui
@@ -21,8 +21,8 @@ COPY . /coreui
 RUN npm run build --production 
 
 ##install camunda##
-#FROM camunda/camunda-bpm-platform:latest
+FROM camunda/camunda-bpm-platform:latest
 
 ##expose ports##
-#EXPOSE 8081 9876
+EXPOSE 8081 9876
 
