@@ -38,16 +38,16 @@ const Popovers = () => {
             <CPopover header="Popover header" content="Popover text">
               <CLink> you probably </CLink>
             </CPopover>
-              haven't heard of them.
+              haven&apos;t heard of them.
             Photo booth beard raw denim letterpress vegan messenger
-            bag stumptown. Farm-to-table seitan, mcsweeney's fixie
+            bag stumptown. Farm-to-table seitan, mcsweeney&apos;s fixie
             sustainable quinoa 8-bit american apparel
             <CPopover header="Popover header" content="Popover text">
               <CLink> have a </CLink>
             </CPopover>
             terry richardson vinyl chambray. Beard stumptown,
             cardigans banh mi lomo thundercats. Tofu biodiesel
-            williamsburg marfa, four loko mcsweeney''s cleanse
+            williamsburg marfa, four loko mcsweeney&apos;s cleanse
             vegan chambray. A really ironic artisan
             <CPopover header="Popover header" content="Popover text">
               <CLink> whatever keytar </CLink>
