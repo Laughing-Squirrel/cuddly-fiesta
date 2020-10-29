@@ -58,16 +58,16 @@ const Users = () => {
             activePage={page}
             clickableRows
             onRowClick={(item) => history.push(`/users/${item.id}`)}
-            scopedSlots = {{
-              'status':
-                render: (item)=>(
-                  <td>
-                    <CBadge color={getBadge(item.status)}>
-                      {item.status}
-                    </CBadge>
-                  </td>
-                )
-            }}
+//          scopedSlots = {{
+//            'status':
+//              (item)=>(
+//                <td>
+//                  <CBadge color={getBadge(item.status)}>
+//                      {item.status}
+//                    </CBadge>
+//                  </td>
+//                )
+//            }}
           />
           <CPagination
             activePage={page}
