@@ -2,7 +2,7 @@
 Express + Core UI with React + Camunda Docker
 
 
-docker run -d --name camunda -p 8080:8080 -p 3000:3000 -p 8081:8081 -p 9876:9876 laughingsquirrel/coreuireactcamunda1:latest
+docker run -d --name camunda -p 8080:8080 -p 5000:5000 -p 8081:8081 -p 9876:9876 laughingsquirrel/coreuireactcamunda1:latest
 
 http://localhost:8080/camunda-welcome/index.html
 
