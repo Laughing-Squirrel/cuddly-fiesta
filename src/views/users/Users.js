@@ -60,7 +60,7 @@ const Users = () => {
             onRowClick={(item) => history.push(`/users/${item.id}`)}
             scopedSlots = {{
               'status':
-                (item)=>(
+                render: (item)=>(
                   <td>
                     <CBadge color={getBadge(item.status)}>
                       {item.status}
