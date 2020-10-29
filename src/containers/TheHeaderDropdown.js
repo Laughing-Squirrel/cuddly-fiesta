@@ -54,14 +54,14 @@ const TheHeaderDropdown = () => {
 //          Comments
 //          <CBadge color="warning" className="mfs-auto">42</CBadge>
 //        </CDropdownItem>
-        <CDropdownItem
-          header
-          tag="div"
-          color="light"
-          className="text-center"
-           >
-          <strong>Settings</strong>
-        </CDropdownItem>
+//        <CDropdownItem
+//          header
+//          tag="div"
+//          color="light"
+//          className="text-center"
+//           >
+//          <strong>Settings</strong>
+//        </CDropdownItem>
         <CDropdownItem>
           <CIcon name="cil-user" className="mfe-2" />Profile
         </CDropdownItem>
