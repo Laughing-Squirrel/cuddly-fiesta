@@ -1,6 +1,6 @@
 import React from 'react'
 import {
-  CBadge,
+ // CBadge,
   CCard,
   CCardBody,
   CCardHeader,
@@ -12,15 +12,15 @@ import { DocsLink } from 'src/reusable'
 
 import usersData from '../../users/UsersData'
 
-const getBadge = status => {
-  switch (status) {
-    case 'Active': return 'success'
-    case 'Inactive': return 'secondary'
-    case 'Pending': return 'warning'
-    case 'Banned': return 'danger'
-    default: return 'primary'
-  }
-}
+//const getBadge = status => {
+//  switch (status) {
+//    case 'Active': return 'success'
+//    case 'Inactive': return 'secondary'
+//    case 'Pending': return 'warning'
+//    case 'Banned': return 'danger'
+//    default: return 'primary'
+//  }
+//}
 const fields = ['name','registered', 'role', 'status']
 
 const Tables = () => {
