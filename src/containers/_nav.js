@@ -14,17 +14,17 @@ export default [
   },
   {
     _tag: 'CSidebarNavTitle',
-    _children: ['Theme']
+    _children: ['Request']
   },
   {
     _tag: 'CSidebarNavItem',
-    name: 'Colors',
+    name: 'New Request',
     to: '/theme/colors',
     icon: 'cil-drop',
   },
   {
     _tag: 'CSidebarNavItem',
-    name: 'Typography',
+    name: 'Existing Request',
     to: '/theme/typography',
     icon: 'cil-pencil',
   },
