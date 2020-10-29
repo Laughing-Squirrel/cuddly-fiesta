@@ -13,12 +13,16 @@ import usersData from './UsersData'
     <CRow>
       <CCol lg={6}>
         <CCard>
-//        <CCardHeader>
-//           User id: {match.params.id}
-//          </CCardHeader>
-//          <CCardBody>
-//              <table className="table table-striped table-hover">
-//                <tbody>
+        <CCardHeader>
+           User id: {match.params.id}
+          </CCardHeader>
+          <CCardBody>
+              <table className="table table-striped table-hover">
+                <tbody>
+                  <tr>
+                    <td>id:</td>
+                    <td>0</td>
+                  </tr>
 //                  {
 //                    userDetails.map(([key, value], index) => {
 //                      return (
@@ -29,9 +33,9 @@ import usersData from './UsersData'
 //                      )
 //                    })
 //                  }
-//                </tbody>
-//              </table>
-//          </CCardBody>
+                </tbody>
+              </table>
+          </CCardBody>
         </CCard>
       </CCol>
     </CRow>
