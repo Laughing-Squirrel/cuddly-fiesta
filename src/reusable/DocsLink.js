@@ -7,7 +7,6 @@ const DocsLink = props => {
     //
     innerRef,
     active,
-    href,
     onClick,
     disabled,
     ...rest
