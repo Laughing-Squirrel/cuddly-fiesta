@@ -3,6 +3,7 @@ import { CLink } from '@coreui/react'
 
 const DocsLink = props => {
   const {
+    href,
     ...rest
   } = props
 
