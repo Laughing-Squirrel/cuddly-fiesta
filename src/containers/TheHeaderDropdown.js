@@ -26,6 +26,25 @@ const TheHeaderDropdown = () => {
         </div>
       </CDropdownToggle>
       <CDropdownMenu className="pt-0" placement="bottom-end">
+    
+        <CDropdownItem>
+          <CIcon name="cil-user" className="mfe-2" />
+          Profile
+        </CDropdownItem>
+        <CDropdownItem>
+          <CIcon name="cil-settings" className="mfe-2" />
+          Settings
+        </CDropdownItem>   
+        <CDropdownItem>
+          <CIcon name="cil-file" className="mfe-2" />
+          Projects
+          <CBadge color="primary" className="mfs-auto">42</CBadge>
+        </CDropdownItem>    
+      </CDropdownMenu>
+    </CDropdown>
+  )
+}    
+    
 //        <CDropdownItem
 //          header
 //          tag="div"
@@ -62,9 +81,9 @@ const TheHeaderDropdown = () => {
 //           >
 //          <strong>Settings</strong>
 //        </CDropdownItem>
-        <CDropdownItem>
-          <CIcon name="cil-user" className="mfe-2" />Profile
-        </CDropdownItem>
+//        <CDropdownItem>
+//          <CIcon name="cil-user" className="mfe-2" />Profile
+//        </CDropdownItem>
 //        <CDropdownItem>
 //          <CIcon name="cil-settings" className="mfe-2" /> 
 //          Settings
@@ -74,19 +93,19 @@ const TheHeaderDropdown = () => {
 //          Payments
 //          <CBadge color="secondary" className="mfs-auto">42</CBadge>
 //        </CDropdownItem>
-        <CDropdownItem>
-          <CIcon name="cil-file" className="mfe-2" /> 
-          Projects
-          <CBadge color="primary" className="mfs-auto">42</CBadge>
-        </CDropdownItem>
+//        <CDropdownItem>
+//          <CIcon name="cil-file" className="mfe-2" /> 
+//          Projects
+//          <CBadge color="primary" className="mfs-auto">42</CBadge>
+//        </CDropdownItem>
 //        <CDropdownItem divider />
 //        <CDropdownItem>
 //          <CIcon name="cil-lock-locked" className="mfe-2" /> 
 //          Lock Account
 //        </CDropdownItem>
-      </CDropdownMenu>
-    </CDropdown>
-  )
-}
+//      </CDropdownMenu>
+//    </CDropdown>
+//  )
+//}
 
 export default TheHeaderDropdown
