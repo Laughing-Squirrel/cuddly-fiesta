@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useHistory, useLocation } from 'react-router-dom'
 import {
+  CBadge,
   CCard,
   CCardBody,
   CCardHeader,
@@ -11,6 +12,16 @@ import {
 } from '@coreui/react'
 
 import usersData from './UsersData'
+
+const getBadge = status => {
+  switch (status) {
+    case 'Active': return 'success'
+    case 'Inactive': return 'secondary'
+    case 'Pending': return 'warning'
+    case 'Banned': return 'danger'
+    default: return 'primary'
+  }
+}
 
 const Users = () => {
   const history = useHistory()
@@ -47,6 +58,16 @@ const Users = () => {
             activePage={page}
             clickableRows
             onRowClick={(item) => history.push(`/users/${item.id}`)}
+            scopedSlots = {{
+              'status':
+                (item)=>(
+                  <td>
+                    <CBadge color={getBadge(item.status)}>
+                      {item.status}
+                    </CBadge>
+                  </td>
+                )
+            }}
           />
           <CPagination
             activePage={page}
