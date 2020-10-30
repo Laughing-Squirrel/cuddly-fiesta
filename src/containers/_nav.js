@@ -25,7 +25,7 @@ export default [
   {
     _tag: 'CSidebarNavItem',
     name: 'Pagination',
-    to: '/base/pagination',
+    to: '/base/paginations',
     icon: 'cil-pencil',
   },
   {
