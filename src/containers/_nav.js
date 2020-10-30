@@ -18,13 +18,13 @@ export default [
   },
   {
     _tag: 'CSidebarNavItem',
-    name: 'New Request',
+    name: 'Colors',
     to: '/theme/colors',
     icon: 'cil-drop',
   },
   {
     _tag: 'CSidebarNavItem',
-    name: 'Existing Request',
+    name: 'Typography',
     to: '/theme/typography',
     icon: 'cil-pencil',
   },
