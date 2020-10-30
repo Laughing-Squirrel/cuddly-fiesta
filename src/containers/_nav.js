@@ -18,14 +18,14 @@ export default [
   },
   {
     _tag: 'CSidebarNavItem',
-    name: 'Breadcrumbs',
-    to: '/base/breadcrumbs',
+    name: 'Navigation',
+    to: '/base/navs',
     icon: 'cil-drop',
   },
   {
     _tag: 'CSidebarNavItem',
-    name: 'Typography',
-    to: '/theme/typography',
+    name: 'Pagination',
+    to: '/base/pagination',
     icon: 'cil-pencil',
   },
   {
