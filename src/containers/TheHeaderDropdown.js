@@ -65,10 +65,10 @@ const TheHeaderDropdown = () => {
         <CDropdownItem>
           <CIcon name="cil-user" className="mfe-2" />Profile
         </CDropdownItem>
-        <CDropdownItem>
-          <CIcon name="cil-settings" className="mfe-2" /> 
-          Settings
-        </CDropdownItem>
+//        <CDropdownItem>
+//          <CIcon name="cil-settings" className="mfe-2" /> 
+//          Settings
+//        </CDropdownItem>
 //        <CDropdownItem>
 //          <CIcon name="cil-credit-card" className="mfe-2" /> 
 //          Payments
