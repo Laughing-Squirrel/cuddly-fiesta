@@ -10,7 +10,6 @@ const ChartBarSimple = props => {
     pointHoverBackgroundColor,
     dataPoints,
     label,
-  //  pointed,
     ...attributes
   } = props
 
