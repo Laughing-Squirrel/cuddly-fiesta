@@ -14,7 +14,7 @@ export default [
   },
   {
     _tag: 'CSidebarNavTitle',
-    _children: ['Request']
+    _children: ['Theme']
   },
   {
     _tag: 'CSidebarNavItem',
