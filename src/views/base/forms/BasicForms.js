@@ -1141,7 +1141,7 @@ const BasicForms = () => {
                           </CInputGroupPrepend>
                           <CInput id="prependedInput" size="16" type="text" />
                         </CInputGroup>
-                        <p className="help-block">Here's some help text</p>
+                        <p className="help-block">Here&apos;s some help text</p>
                       </div>
                     </CFormGroup>
                     <CFormGroup>
@@ -1153,7 +1153,7 @@ const BasicForms = () => {
                             <CInputGroupText>.00</CInputGroupText>
                           </CInputGroupAppend>
                         </CInputGroup>
-                        <span className="help-block">Here's more help text</span>
+                        <span className="help-block">Here&apos;s more help text</span>
                       </div>
                     </CFormGroup>
                     <CFormGroup>
