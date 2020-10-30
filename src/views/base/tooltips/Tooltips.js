@@ -38,7 +38,7 @@ const Tooltips = () => {
             <CTooltip content="Tooltip text">
               <CLink> you probably </CLink>
             </CTooltip>
-              haven&apos;t heard of them.
+              haven't heard of them.
             Photo booth beard raw denim letterpress vegan messenger
             bag stumptown. Farm-to-table seitan, mcsweeney&apos;s fixie
             sustainable quinoa 8-bit american apparel

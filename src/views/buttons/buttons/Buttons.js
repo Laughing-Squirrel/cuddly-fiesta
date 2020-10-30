@@ -535,7 +535,7 @@ const Buttons = () => {
           Sizes
         </CCardHeader>
         <CCardBody>
-          <p>Fancy larger or smaller buttons &ldquo; Add code LG or SM for additional sizes.</p>
+          <p>Fancy larger or smaller buttons Add lg or sm for additional sizes.</p>
           <CRow className="align-items-center">
             <CCol col="2" xl className="mb-3 mb-xl-0">
               Small
