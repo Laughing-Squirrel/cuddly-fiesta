@@ -5,8 +5,8 @@ import {
   CToggler,
   CHeaderBrand,
   CHeaderNav,
-//  CHeaderNavItem,
-//  CHeaderNavLink,
+{/*  CHeaderNavItem,
+  CHeaderNavLink */} 
   CSubheader,
   CBreadcrumbRouter,
   CLink
@@ -18,9 +18,9 @@ import routes from '../routes'
 
 import { 
   TheHeaderDropdown
-//  TheHeaderDropdownMssg,
-//  TheHeaderDropdownNotif,
-//  TheHeaderDropdownTasks
+{/*  TheHeaderDropdownMssg,
+  TheHeaderDropdownNotif,
+  TheHeaderDropdownTasks */}
 }  from './index'
 
 const TheHeader = () => {
@@ -53,22 +53,22 @@ const TheHeader = () => {
         <CIcon name="logo" height="48" alt="Logo"/>
       </CHeaderBrand>
 
-//      <CHeaderNav className="d-md-down-none mr-auto">
-//        <CHeaderNavItem className="px-3" >
-//          <CHeaderNavLink to="/dashboard">Dashboard</CHeaderNavLink>
-//        </CHeaderNavItem>
-//        <CHeaderNavItem  className="px-3">
-//          <CHeaderNavLink to="/users">Users</CHeaderNavLink>
-//        </CHeaderNavItem>
-//        <CHeaderNavItem className="px-3">
-//          <CHeaderNavLink>Settings</CHeaderNavLink>
-//        </CHeaderNavItem>
-//      </CHeaderNav>
+{/*       <CHeaderNav className="d-md-down-none mr-auto">
+        <CHeaderNavItem className="px-3" >
+          <CHeaderNavLink to="/dashboard">Dashboard</CHeaderNavLink>
+        </CHeaderNavItem>
+        <CHeaderNavItem  className="px-3">
+          <CHeaderNavLink to="/users">Users</CHeaderNavLink>
+        </CHeaderNavItem>
+        <CHeaderNavItem className="px-3">
+          <CHeaderNavLink>Settings</CHeaderNavLink>
+        </CHeaderNavItem>
+      </CHeaderNav>   */}
 
       <CHeaderNav className="px-3">
- //       <TheHeaderDropdownNotif/>
- //       <TheHeaderDropdownTasks/>
-//        <TheHeaderDropdownMssg/>
+{/*     <TheHeaderDropdownNotif/>
+        <TheHeaderDropdownTasks/>
+        <TheHeaderDropdownMssg/> */}
         <TheHeaderDropdown/>
       </CHeaderNav>
 
