@@ -9,12 +9,9 @@ import {
 } from '@coreui/react'
 import CIcon from '@coreui/icons-react'
 
-const WidgetsDropdown = lazy(() => import('../widgets/WidgetsDropdown.js'))
-
 const Dashboard = () => {
   return (
     <>
-      <WidgetsDropdown />
       <CCard>
         <CCardBody>
           <CRow>
