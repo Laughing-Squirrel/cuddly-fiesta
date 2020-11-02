@@ -19,7 +19,6 @@ const Dashboard = () => {
               <h4 id="traffic" className="card-title mb-0">Traffic</h4>
               <div className="small text-muted">November 2017</div>
             </CCol>
-            </CCol>
           </CRow>
         </CCardBody>
         <CCardFooter>
