@@ -4,7 +4,6 @@ ENV NPM_CONFIG_LOGLEVEL warn
 
 # Install and configure serve
 RUN npm install -g serve
-CMD serve -s build
 
 #set work directory
 WORKDIR /coreui
@@ -18,6 +17,9 @@ COPY . /coreui
 
 #build for production
 RUN npm run build --production 
+
+#run production build
+CMD serve -s build
 
 ##install camunda##
 FROM camunda/camunda-bpm-platform:latest
