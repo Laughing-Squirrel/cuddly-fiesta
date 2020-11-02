@@ -20,11 +20,10 @@ RUN npm run build --production
 
 #run production build
 CMD serve -s build
-EXPOSE 5000
 
 ##install camunda##
 FROM camunda/camunda-bpm-platform:latest
 
 ##expose ports##
-#EXPOSE 8081 9876
+EXPOSE 5000 8081 9876
 
