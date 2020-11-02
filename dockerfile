@@ -23,8 +23,8 @@ CMD serve -s build
 EXPOSE 5000
 
 ##install camunda##
-#FROM camunda/camunda-bpm-platform:latest
+FROM camunda/camunda-bpm-platform:latest
 
 ##expose ports##
-#EXPOSE 8081 9876 5000 3000
+#EXPOSE 8081 9876
 
