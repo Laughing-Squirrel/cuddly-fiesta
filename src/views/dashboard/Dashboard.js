@@ -9,7 +9,6 @@ import {
 
 const Dashboard = () => {
   return (
-    <>
       <CCard>
         <CCardBody>
           <CRow>
@@ -34,8 +33,6 @@ const Dashboard = () => {
           </CRow>
         </CCardFooter>
       </CCard>
-
-    </>
   )
 }
 
