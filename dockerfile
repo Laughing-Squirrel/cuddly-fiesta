@@ -23,5 +23,5 @@ RUN npm run build --production
 FROM camunda/camunda-bpm-platform:latest
 
 ##expose ports##
-EXPOSE 8081 9876 5000
+EXPOSE 8081 9876 5000 3000
 
