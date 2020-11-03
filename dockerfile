@@ -1,3 +1,7 @@
+##install camunda##
+WORKDIR /camunda
+FROM camunda/camunda-bpm-platform:latest
+
 ##install COREUI##
 FROM node:12.19.0
 ENV NPM_CONFIG_LOGLEVEL warn
@@ -20,9 +24,6 @@ RUN npm run build --production
 
 #run production build
 CMD serve -s build
-
-##install camunda##
-FROM camunda/camunda-bpm-platform:latest
 
 ##expose ports##
 EXPOSE 5000 8081 9876
