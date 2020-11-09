@@ -60,6 +60,9 @@ RUN apk add --no-cache \
 #build for production
 RUN npm run build --production 
 
+#copy local files into image
+COPY . /coreui
+
 ##install camunda##
 RUN download.sh
 
