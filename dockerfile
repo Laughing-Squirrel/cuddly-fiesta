@@ -23,8 +23,6 @@ CMD serve -s build
 
 ##install camunda##
 
-FROM alpine:3.10 as builder
-
 ARG VERSION=7.15.0
 ARG DISTRO=tomcat
 ARG SNAPSHOT=true
@@ -40,8 +38,6 @@ ARG MAVEN_PROXY_PASSWORD
 
 ARG JMX_PROMETHEUS_VERSION=0.12.0
 
-WORKDIR /camundatmp
-
 RUN apk add --no-cache \
         bash \
         ca-certificates \
@@ -49,8 +45,6 @@ RUN apk add --no-cache \
         tar \
         wget \
         xmlstarlet
-
-COPY settings.xml download.sh camunda-run.sh camunda-tomcat.sh camunda-wildfly.sh 
 
 RUN download.sh
 
