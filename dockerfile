@@ -1,5 +1,5 @@
 ##install COREUI##
-FROM node:12.19.0
+FROM node:12.19.0-alpine3.10
 ENV NPM_CONFIG_LOGLEVEL warn
 
 #set work directory
