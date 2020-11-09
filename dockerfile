@@ -1,59 +1,19 @@
 ##install COREUI##
 FROM node:12.19.0-alpine3.10
+
 ENV NPM_CONFIG_LOGLEVEL warn
-
-#set work directory
-WORKDIR /coreui
-
-# Install and configure serve
-RUN npm install -g serve
-
-#install dependencies
-COPY package.json package.json
-RUN npm install
-
-#copy local files into image
-COPY . /coreui
-
-#build for production
-RUN npm run build --production 
-
-#run production build
-CMD serve -s build
-
-##install camunda##
 
 ARG VERSION=7.15.0
 ARG DISTRO=tomcat
 ARG SNAPSHOT=true
-
 ARG EE=false
 ARG USER
 ARG PASSWORD
-
 ARG MAVEN_PROXY_HOST
 ARG MAVEN_PROXY_PORT
 ARG MAVEN_PROXY_USER
 ARG MAVEN_PROXY_PASSWORD
-
 ARG JMX_PROMETHEUS_VERSION=0.12.0
-
-RUN apk add --no-cache \
-        bash \
-        ca-certificates \
-        maven \
-        tar \
-        wget \
-        xmlstarlet
-
-RUN download.sh
-
-
-##### FINAL IMAGE #####
-
-FROM alpine:3.10
-
-ARG VERSION=7.15.0
 
 ENV CAMUNDA_VERSION=${VERSION}
 ENV DB_DRIVER=
@@ -74,6 +34,35 @@ ENV JAVA_OPTS="-Xmx768m -XX:MaxMetaspaceSize=256m"
 ENV JMX_PROMETHEUS=false
 ENV JMX_PROMETHEUS_CONF=/camunda/javaagent/prometheus-jmx.yml
 ENV JMX_PROMETHEUS_PORT=9404
+
+
+#set work directory
+WORKDIR /coreui
+
+# Install and configure serve
+RUN npm install -g serve
+
+#install dependencies
+COPY package.json package.json
+RUN npm install
+
+#copy local files into image
+COPY . /coreui
+
+#build for production
+RUN npm run build --production 
+
+##install camunda##
+
+RUN apk add --no-cache \
+        bash \
+        ca-certificates \
+        maven \
+        tar \
+        wget \
+        xmlstarlet
+
+RUN download.sh
 
 # Downgrading wait-for-it is necessary until this PR is merged
 # https://github.com/vishnubob/wait-for-it/pull/68
@@ -98,6 +87,10 @@ ENTRYPOINT ["/sbin/tini", "--"]
 CMD ["./camunda.sh"]
 
 COPY --chown=camunda:camunda --from=builder /camunda .
+
+##run production build##
+WORKDIR /coreui
+CMD serve -s build
 
 ##expose ports##
 EXPOSE 5000 8081 9876 8080 9404
