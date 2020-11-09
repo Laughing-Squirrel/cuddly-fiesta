@@ -49,11 +49,6 @@ RUN npm install
 #copy local files into image
 COPY . /coreui
 
-#build for production
-RUN npm run build --production 
-
-##install camunda##
-
 RUN apk add --no-cache \
         bash \
         ca-certificates \
@@ -62,6 +57,10 @@ RUN apk add --no-cache \
         wget \
         xmlstarlet
 
+#build for production
+RUN npm run build --production 
+
+##install camunda##
 RUN download.sh
 
 # Downgrading wait-for-it is necessary until this PR is merged
