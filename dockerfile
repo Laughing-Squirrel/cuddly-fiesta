@@ -57,7 +57,8 @@ RUN apk add --no-cache \
         xmlstarlet
 
 ##install camunda##
-RUN /download.sh
+COPY download.sh download.sh
+RUN download.sh
 
 # Downgrading wait-for-it is necessary until this PR is merged
 # https://github.com/vishnubob/wait-for-it/pull/68
