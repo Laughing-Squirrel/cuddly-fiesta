@@ -64,7 +64,7 @@ RUN npm run build --production
 COPY download.sh /
 
 ##install camunda##
-RUN download.sh
+RUN /download.sh
 
 # Downgrading wait-for-it is necessary until this PR is merged
 # https://github.com/vishnubob/wait-for-it/pull/68
