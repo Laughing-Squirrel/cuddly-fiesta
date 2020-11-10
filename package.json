@@ -1,12 +1,10 @@
 {
   "name": "@coreui/coreui-free-react-admin-template",
   "version": "3.3.0",
-  "description": "CoreUI React Open Source Bootstrap 4 Admin Template",
+  "description": "CoreUI React Open Source Bootstrap",
   "author": {
     "name": "CoreUI",
-    "url": "https://coreui.io",
-    "github": "https://github.com/coreui",
-    "twitter": "https://twitter.com/core_ui"
+    "url": "https://coreui.io"
   },
   "contributors": [
     {
@@ -44,7 +42,8 @@
     "redux": "4.0.5",
     "chokidar": "~3.4.3",
     "express-gateway": "~1.16.10",
-    "node-sass": "~4.14.1"
+    "node-sass": "~4.14.1",
+    "react-hook-form": "~6.11.0"
   },
   "devDependencies": {
     "react-scripts": "^4.0.0",
