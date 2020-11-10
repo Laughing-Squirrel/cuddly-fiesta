@@ -60,14 +60,11 @@ RUN apk add --no-cache \
 #build for production
 RUN npm run build --production 
 
-#set work directory
-WORKDIR /camunda
-
 #copy local files into image
-COPY download.sh /camunda
+COPY download.sh /
 
 ##install camunda##
-RUN /camunda/download.sh
+RUN download.sh
 
 # Downgrading wait-for-it is necessary until this PR is merged
 # https://github.com/vishnubob/wait-for-it/pull/68
