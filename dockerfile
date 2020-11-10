@@ -35,7 +35,6 @@ ENV JMX_PROMETHEUS=false
 ENV JMX_PROMETHEUS_CONF=/camunda/javaagent/prometheus-jmx.yml
 ENV JMX_PROMETHEUS_PORT=9404
 
-
 #set work directory
 WORKDIR /coreui
 
@@ -56,12 +55,6 @@ RUN apk add --no-cache \
         tar \
         wget \
         xmlstarlet
-
-#build for production
-RUN npm run build --production 
-
-#copy local files into image
-COPY download.sh /
 
 ##install camunda##
 RUN /download.sh
@@ -92,6 +85,10 @@ COPY --chown=camunda:camunda --from=builder /camunda .
 
 ##run production build##
 WORKDIR /coreui
+
+#build for production
+RUN npm run build --production 
+
 CMD serve -s build
 
 ##expose ports##
