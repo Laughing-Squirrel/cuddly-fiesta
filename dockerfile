@@ -64,10 +64,10 @@ RUN npm run build --production
 WORKDIR /camunda
 
 #copy local files into image
-COPY . /camunda
+COPY download.sh /camunda
 
 ##install camunda##
-RUN download.sh
+RUN /camunda/download.sh
 
 # Downgrading wait-for-it is necessary until this PR is merged
 # https://github.com/vishnubob/wait-for-it/pull/68
