@@ -57,10 +57,14 @@ RUN apk add --no-cache \
         xmlstarlet
 
 ##install camunda##
-#set work directory
+
+RUN addgroup -g 1000 -S camunda && \
+    adduser -u 1000 -S camunda -G camunda -h /camunda -s /bin/bash -D camunda
 WORKDIR /camunda
-COPY download.sh /camunda/download.sh
-RUN /camunda/download.sh
+USER camunda
+
+COPY download.sh download.sh
+RUN download.sh
 
 # Downgrading wait-for-it is necessary until this PR is merged
 # https://github.com/vishnubob/wait-for-it/pull/68
@@ -76,10 +80,10 @@ RUN apk add --no-cache \
       "https://raw.githubusercontent.com/vishnubob/wait-for-it/a454892f3c2ebbc22bd15e446415b8fcb7c1cfa4/wait-for-it.sh" \
     && chmod +x /usr/local/bin/wait-for-it.sh
 
-RUN addgroup -g 1000 -S camunda && \
-    adduser -u 1000 -S camunda -G camunda -h /camunda -s /bin/bash -D camunda
-WORKDIR /camunda
-USER camunda
+##RUN addgroup -g 1000 -S camunda && \
+##    adduser -u 1000 -S camunda -G camunda -h /camunda -s /bin/bash -D camunda
+##WORKDIR /camunda
+##USER camunda
 
 ENTRYPOINT ["/sbin/tini", "--"]
 CMD ["./camunda.sh"]
