@@ -59,8 +59,8 @@ RUN apk add --no-cache \
 ##install camunda##
 #set work directory
 WORKDIR /camunda
-COPY download.sh download.sh
-RUN download.sh
+COPY download.sh /camunda/download.sh
+RUN /camunda/download.sh
 
 # Downgrading wait-for-it is necessary until this PR is merged
 # https://github.com/vishnubob/wait-for-it/pull/68
