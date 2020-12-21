@@ -58,8 +58,8 @@ RUN apk add --no-cache \
 
 ##install camunda##
 
-RUN addgroup -g 1000 -S camunda && \
-    adduser -u 1000 -S camunda -G camunda -h /camunda -s /bin/bash -D camunda
+RUN addgroup -g 1001 -S camunda && \
+    adduser -u 1001 -S camunda -G camunda -h /camunda -s /bin/bash -D camunda
 WORKDIR /camunda
 USER camunda
 
