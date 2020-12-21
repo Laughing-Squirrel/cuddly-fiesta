@@ -57,6 +57,8 @@ RUN apk add --no-cache \
         xmlstarlet
 
 ##install camunda##
+#set work directory
+WORKDIR /camunda
 COPY download.sh download.sh
 RUN download.sh
 
