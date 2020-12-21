@@ -64,7 +64,7 @@ WORKDIR /camunda
 USER camunda
 
 COPY download.sh /camunda/download.sh
-RUN download.sh
+RUN /camunda/download.sh
 
 # Downgrading wait-for-it is necessary until this PR is merged
 # https://github.com/vishnubob/wait-for-it/pull/68
