@@ -63,7 +63,7 @@ RUN addgroup -g 1001 -S camunda && \
 WORKDIR /camunda
 USER camunda
 
-COPY download.sh download.sh
+COPY download.sh /camunda/download.sh
 RUN download.sh
 
 # Downgrading wait-for-it is necessary until this PR is merged
