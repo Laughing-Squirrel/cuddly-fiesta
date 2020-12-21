@@ -19,3 +19,5 @@ To Do:  Create db-env.txt
  
  docker run -d --name camunda -p 8080:8080 --link postgresql:db \
            --env-file db-env.txt camunda/camunda-bpm-platform:latest
+
+Test
