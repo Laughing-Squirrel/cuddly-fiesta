@@ -9,28 +9,75 @@ export default [
     icon: <CIcon name="cil-speedometer" customClasses="c-sidebar-nav-icon"/>,
     badge: {
       color: 'info',
-      text: 'WHAT',
+      text: 'NEW!',
     }
   },
   {
     _tag: 'CSidebarNavTitle',
-    _children: ['Theme']
+    _children: ['Request']
   },
   {
     _tag: 'CSidebarNavItem',
-    name: 'Navigation',
+    name: 'Create New Request',
     to: '/base/navs',
-    icon: 'cil-drop',
+    icon: 'cil-file',
   },
   {
     _tag: 'CSidebarNavItem',
-    name: 'Pagination',
+    name: 'View Existing Request',
     to: '/base/paginations',
     icon: 'cil-pencil',
   },
   {
     _tag: 'CSidebarNavDivider',
     className: 'm-2'
+  },
+
+  {
+    _tag: 'CSidebarNavTitle',
+    _children: ['Manage']
+  },
+  {
+    _tag: 'CSidebarNavItem',
+    name: 'Inventory Processes',
+    to: '/base/navs',
+    icon: 'cil-puzzle',
+  },
+  {
+    _tag: 'CSidebarNavItem',
+    name: 'Configuration',
+    to: '/base/paginations',
+    icon: 'cil-cursor',
+  },
+{
+    _tag: 'CSidebarNavDropdown',
+    name: 'Reports',
+    route: '/base/paginations',
+    icon: 'cil-star',
+    _children: [
+      {
+        _tag: 'CSidebarNavItem',
+        name: 'Report 1',
+        to: '/base/paginations',
+        badge: {
+          color: 'success',
+          text: 'NEW',
+        },
+      },
+      {
+        _tag: 'CSidebarNavItem',
+        name: 'Report 2',
+        to: '/base/paginations',
+      },
+      {
+        _tag: 'CSidebarNavItem',
+        name: 'Report 3',
+        to: '/base/paginations',
+      },
+    ],
+  },
+  {
+    _tag: 'CSidebarNavDivider',
+    className: 'm-2'
   }
 ]
-
