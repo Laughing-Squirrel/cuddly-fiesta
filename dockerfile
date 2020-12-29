@@ -31,3 +31,7 @@ EXPOSE 5000 8081
 RUN npm run build --production .
 
 CMD serve -s build
+
+##camunda#
+FROM camunda/camunda-bpm-platform:tomcat-latest
+ADD logistics.war /camunda/webapps/logistics.war
