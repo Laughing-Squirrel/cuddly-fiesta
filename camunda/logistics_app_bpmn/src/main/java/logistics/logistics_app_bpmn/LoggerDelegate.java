@@ -1,4 +1,4 @@
-package org.logistics.logistics_storefront_bpm;
+package logistics.logistics_app_bpmn;
 
 import java.util.logging.Logger;
 

@@ -1,4 +1,4 @@
-package org.logistics.logistics_storefront_bpm;
+package logistics.logistics_app_bpmn;
 
 import org.apache.ibatis.logging.LogFactory;
 import org.camunda.bpm.engine.runtime.ProcessInstance;
