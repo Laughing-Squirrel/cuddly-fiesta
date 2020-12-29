@@ -3,6 +3,9 @@
 FROM camunda/camunda-bpm-platform:tomcct-latest as camunda
 ADD /camunda/logistics_app_bpmn/target/logistics_app_bpmn.war /camunda/webapps/logistics.war
 
+#expose ports
+EXPOSE 8080
+
 ##COREUI##
 FROM node:12.19.0-alpine3.10 as coreui
 
@@ -22,7 +25,7 @@ RUN npm install
 COPY . /coreui
 
 #expose ports
-EXPOSE 5000 8081 8080
+EXPOSE 5000 8081
 
 RUN apk add --no-cache \
         bash \
