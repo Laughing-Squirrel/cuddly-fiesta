@@ -1,6 +1,6 @@
 
 ##camunda#
-FROM camunda/camunda-bpm-platform:tomcct-latest as camunda
+FROM camunda/camunda-bpm-platform:tomcat-latest as camunda
 ADD /camunda/logistics_app_bpmn/target/logistics_app_bpmn.war /camunda/webapps/logistics.war
 
 #expose ports
