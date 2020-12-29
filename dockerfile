@@ -34,4 +34,4 @@ CMD serve -s build
 
 ##camunda#
 FROM camunda/camunda-bpm-platform:tomcat-latest
-ADD logistics.war /camunda/webapps/logistics.war
+ADD /camunda/logistics_app_bpmn/target/logistics_app_bpmn.war /camunda/webapps/logistics.war
