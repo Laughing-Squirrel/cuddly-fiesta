@@ -22,7 +22,7 @@ RUN npm install
 COPY . /coreui
 
 #expose ports
-EXPOSE 5000 8081
+EXPOSE 5000 8081 8080
 
 RUN apk add --no-cache \
         bash \
