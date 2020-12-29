@@ -31,7 +31,3 @@ RUN apk add --no-cache \
 RUN npm run build --production .
 
 CMD serve -s build
-
-##camunda#
-FROM camunda/camunda-bpm-platform:tomcat-latest as camunda
-ADD /camunda/logistics_app_bpmn/target/logistics_app_bpmn.war /camunda/webapps/logistics.war
