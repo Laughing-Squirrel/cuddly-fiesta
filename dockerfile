@@ -25,7 +25,7 @@ RUN apk add --no-cache \
         xmlstarlet
 
 #expose ports
-EXPOSE 5000 8081 
+EXPOSE 5000 8081 8080 
 
 #run production build
 RUN npm run build --production .
