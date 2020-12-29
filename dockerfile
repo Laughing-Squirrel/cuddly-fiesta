@@ -1,3 +1,8 @@
+
+##camunda#
+FROM camunda/camunda-bpm-platform:tomcat-latest as camunda
+ADD /camunda/logistics_app_bpmn/target/logistics_app_bpmn.war /camunda/webapps/logistics.war
+
 ##COREUI##
 FROM node:12.19.0-alpine3.10 as coreui
 
@@ -16,6 +21,9 @@ RUN npm install
 #copy local files into image
 COPY . /coreui
 
+#expose ports
+EXPOSE 5000 8081 8080 
+
 RUN apk add --no-cache \
         bash \
         ca-certificates \
@@ -28,10 +36,3 @@ RUN apk add --no-cache \
 RUN npm run build --production .
 
 CMD serve -s build
-
-##camunda#
-FROM camunda/camunda-bpm-platform:tomcat-latest
-ADD /camunda/logistics_app_bpmn/target/logistics_app_bpmn.war /camunda/webapps/logistics.war
-
-#expose ports
-EXPOSE 5000 8081 8080 
