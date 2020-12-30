@@ -1,4 +1,3 @@
 ##camunda#
 FROM camunda/camunda-bpm-platform:latest as camunda
-RM /camunda/webapps/*
-COPY logistics_app_bpmn/target/logistics_app_bpmn.war /camunda/webapps/logistics.war
+COPY logistics_app_bpmn/target/logistics_app_bpmn.war /camunda/webapps/
