@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: logistics.logistics_app_bpmn.ProcessUnitTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.7 sec
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.572 sec
