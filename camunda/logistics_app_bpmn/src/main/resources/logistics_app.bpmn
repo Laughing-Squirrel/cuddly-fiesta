@@ -1,47 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_0jscmnr" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="4.4.0">
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_0jscmnr" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="4.4.0">
   <bpmn:process id="FeedTheCat" isExecutable="true">
     <bpmn:startEvent id="StartEvent_1" />
     <bpmn:userTask id="FeedCat" name="Feed the Cat">
-      <bpmn:outgoing>Flow_1xocy4h</bpmn:outgoing>
+      <bpmn:extensionElements>
+        <camunda:executionListener class="" event="start" />
+      </bpmn:extensionElements>
+      <bpmn:outgoing>FeedingCat</bpmn:outgoing>
+      <bpmn:outgoing>Flow_10s4ogl</bpmn:outgoing>
     </bpmn:userTask>
     <bpmn:endEvent id="Event_0z9mgrq" name="Cat is Full">
-      <bpmn:incoming>catEats</bpmn:incoming>
+      <bpmn:incoming>FeedingCat</bpmn:incoming>
     </bpmn:endEvent>
-    <bpmn:sequenceFlow id="Flow_1xocy4h" sourceRef="FeedCat" targetRef="Gateway_16cmnm7" />
-    <bpmn:exclusiveGateway id="Gateway_16cmnm7">
-      <bpmn:incoming>Flow_1xocy4h</bpmn:incoming>
-      <bpmn:outgoing>catEats</bpmn:outgoing>
-      <bpmn:outgoing>catNoEat</bpmn:outgoing>
+    <bpmn:sequenceFlow id="FeedingCat" name="Feeding Cat" sourceRef="FeedCat" targetRef="Event_0z9mgrq" />
+    <bpmn:exclusiveGateway id="Gateway_0eryo0v">
+      <bpmn:incoming>Flow_10s4ogl</bpmn:incoming>
     </bpmn:exclusiveGateway>
-    <bpmn:sequenceFlow id="catEats" name="Cat Eats" sourceRef="Gateway_16cmnm7" targetRef="Event_0z9mgrq" />
-    <bpmn:task id="Activity_1pi2ftp">
-      <bpmn:incoming>catNoEat</bpmn:incoming>
-    </bpmn:task>
-    <bpmn:sequenceFlow id="catNoEat" name="Cat Does not Eat" sourceRef="Gateway_16cmnm7" targetRef="Activity_1pi2ftp" />
+    <bpmn:sequenceFlow id="Flow_10s4ogl" sourceRef="FeedCat" targetRef="Gateway_0eryo0v" />
   </bpmn:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="FeedTheCat">
-      <bpmndi:BPMNEdge id="Flow_1xocy4h_di" bpmnElement="Flow_1xocy4h">
+      <bpmndi:BPMNEdge id="Flow_1xocy4h_di" bpmnElement="FeedingCat">
         <di:waypoint x="340" y="117" />
-        <di:waypoint x="353" y="117" />
-        <di:waypoint x="353" y="110" />
-        <di:waypoint x="365" y="110" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0lo7563_di" bpmnElement="catEats">
-        <di:waypoint x="414" y="111" />
-        <di:waypoint x="572" y="116" />
+        <di:waypoint x="572" y="117" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="472" y="96" width="43" height="14" />
+          <dc:Bounds x="426" y="99" width="61" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_14woq3n_di" bpmnElement="catNoEat">
-        <di:waypoint x="390" y="135" />
-        <di:waypoint x="390" y="220" />
-        <di:waypoint x="580" y="220" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="437" y="203" width="85" height="14" />
-        </bpmndi:BPMNLabel>
+      <bpmndi:BPMNEdge id="Flow_10s4ogl_di" bpmnElement="Flow_10s4ogl">
+        <di:waypoint x="340" y="117" />
+        <di:waypoint x="600" y="117" />
+        <di:waypoint x="600" y="205" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
         <dc:Bounds x="179" y="99" width="36" height="36" />
@@ -55,11 +44,8 @@
           <dc:Bounds x="565" y="142" width="50" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Gateway_16cmnm7_di" bpmnElement="Gateway_16cmnm7" isMarkerVisible="true">
-        <dc:Bounds x="365" y="85" width="50" height="50" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_1pi2ftp_di" bpmnElement="Activity_1pi2ftp">
-        <dc:Bounds x="580" y="180" width="100" height="80" />
+      <bpmndi:BPMNShape id="Gateway_0eryo0v_di" bpmnElement="Gateway_0eryo0v" isMarkerVisible="true">
+        <dc:Bounds x="575" y="205" width="50" height="50" />
       </bpmndi:BPMNShape>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
