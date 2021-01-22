@@ -3,6 +3,11 @@
   "auth-server-url": "http://localhost:8180/auth/",
   "ssl-required": "external",
   "resource": "logistics",
-  "public-client": true,
-  "confidential-port": 0
+  "verify-token-audience": true,
+  "credentials": {
+    "secret": "2f47ae65-4b1d-4305-939c-fa09d4a7573c"
+  },
+  "use-resource-role-mappings": true,
+  "confidential-port": 0,
+  "policy-enforcer": {}
 }
