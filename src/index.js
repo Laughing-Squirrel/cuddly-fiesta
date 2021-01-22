@@ -5,20 +5,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import UserService from "./services/UserService";
+import UserService from './services/UserService';
 import { icons } from './assets/icons'
 
 import { Provider } from 'react-redux'
 import store from './store'
                                         
 React.icons = icons
-                                       
-const renderApp = () => ReactDOM.render(
-  <Provider store={store}>
-    <App/>
-  </Provider>, 
-  document.getElementById('root')
-);
+
+//const renderApp = () => ReactDOM.render(<App {...{ store, history }} />, document.getElementById("app"));
+
+const renderApp = () => ReactDOM.render(<Provider store={store}> <App/> </Provider>, document.getElementById('root'));
 
 UserService.initKeycloak(renderApp);
 
