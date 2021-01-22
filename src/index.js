@@ -13,11 +13,13 @@ import store from './store'
                                         
 React.icons = icons
 
-//const renderApp = () => ReactDOM.render(<App {...{ store, history }} />, document.getElementById("app"));
+//const renderApp = () => ReactDOM.render(<App {...{ store, history }} />, document.getElementById('root'));
 
-const renderApp = () => ReactDOM.render(<Provider store={store}> <App/> </Provider>, document.getElementById('root'));
+//const renderApp = () => ReactDOM.render(<Provider store={store}> <App/> </Provider>, document.getElementById('root'));
 
-UserService.initKeycloak(renderApp);
+//UserService.initKeycloak(renderApp);
+
+ReactDOM.render(<App {...{ store, history }} />, document.getElementById('root'), UserService.initKeycloak);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
