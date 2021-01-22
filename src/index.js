@@ -11,6 +11,8 @@ import { icons } from './assets/icons'
 import { Provider } from 'react-redux'
 import store from './store'
 
+const renderApp = () => ReactDOM.render(<App {...{ store, history }} />, document.getElementById("app"));
+                                        
 React.icons = icons
 
 ReactDOM.render(
@@ -19,6 +21,7 @@ ReactDOM.render(
   </Provider>, 
   document.getElementById('root')
 );
+
 
 UserService.initKeycloak(renderApp);
 
