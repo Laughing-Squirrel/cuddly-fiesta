@@ -8,6 +8,6 @@
     "secret": "2f47ae65-4b1d-4305-939c-fa09d4a7573c"
   },
   "use-resource-role-mappings": true,
-  "confidential-port": 0,
+  "confidential-port": 8180,
   "policy-enforcer": {}
 }
