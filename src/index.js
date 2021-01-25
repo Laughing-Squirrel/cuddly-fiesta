@@ -15,9 +15,8 @@ import store from './store'
 
 React.icons = icons
 
-const renderApp = () =>  ReactDOM.render(<Provider store={store}> <App/> </Provider>, document.getElementById('root'), UserService.initKeycloak);
-                                         
-UserService.initKeycloak(renderApp);
+ReactDOM.render(<Provider store={store}> <App ref={UserService.initKeycloak}/> </Provider>, document.getElementById('root'));
+
 HttpService.configure();
 
 // If you want your app to work offline and load faster, you can change
