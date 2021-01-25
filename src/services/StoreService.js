@@ -30,4 +30,3 @@ const StoreService = {
 };
 
 export default StoreService;
-© 2021 GitHub, Inc.
