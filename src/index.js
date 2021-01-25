@@ -6,7 +6,6 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import HttpService from "./services/HttpService";
-import StoreService from "./services/StoreService";
 import UserService from "./services/UserService";
 
 import { icons } from './assets/icons'
