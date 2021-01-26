@@ -20,7 +20,7 @@ const initKeycloak = (onAuthenticatedCallback) => {
         console.warn("not authenticated!");
         doLogin();
       }
-    })
+    });
 };
 
 const doLogin = _kc.login;
