@@ -5,6 +5,7 @@ import {
   TheFooter,
   TheHeader
 } from './index'
+import RenderOnAnonymous from "./RenderOnAnonymous";
 
 const TheLayout = () => {
 
