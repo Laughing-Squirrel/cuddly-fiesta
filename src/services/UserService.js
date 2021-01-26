@@ -51,4 +51,3 @@ const UserService = {
 };
 
 export default UserService;
-© 2021 GitHub, Inc.
