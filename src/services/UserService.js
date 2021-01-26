@@ -14,12 +14,11 @@ const initKeycloak = (onAuthenticatedCallback) => {
     pkceMethod: 'S256',
   })
     .then((authenticated) => {
-      if (authenticated) {
+      // if (authenticated) {
         onAuthenticatedCallback();
-      } else {
-        console.warn("not authenticated!");
-        doLogin();
-      }
+      // } else {
+      //   doLogin();
+      // }
     })
 };
 
@@ -29,19 +28,27 @@ const doLogout = _kc.logout;
 
 const getToken = () => _kc.token;
 
-const updateToken = (successCallback) => {
-  return _kc.updateToken(5)
+const isLoggedIn = () => !!_kc.token;
+
+const updateToken = (successCallback) =>
+  _kc.updateToken(5)
     .then(successCallback)
-    .catch(doLogin)
-};
+    .catch(doLogin);
 
-const getUsername = () => _kc.tokenParsed.preferred_username;
+const getUsername = () => _kc.tokenParsed?.preferred_username;
 
-export default {
+const hasRole = (roles) => roles.some((role) => _kc.hasRealmRole(role));
+
+const UserService = {
   initKeycloak,
   doLogin,
   doLogout,
+  isLoggedIn,
   getToken,
   updateToken,
   getUsername,
-}
+  hasRole,
+};
+
+export default UserService;
+© 2021 GitHub, Inc.
