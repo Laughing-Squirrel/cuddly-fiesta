@@ -13,8 +13,8 @@ const initKeycloak = (onAuthenticatedCallback) => {
     silentCheckSsoRedirectUri: window.location.origin + '/silent-check-sso.html',
     pkceMethod: 'S256',
   })
-    .then((authenticated) => {
-      // if (authenticated) {
+    //.then((authenticated) => {
+       if (authenticated) {
         onAuthenticatedCallback();
       } else {
         console.warn("not authenticated!");
