@@ -9,9 +9,9 @@ import {
   CRow
 } from '@coreui/react'
 
-import UserService from "../services/UserService";
-import RenderOnRole from "./RenderOnRole";
-import RenderOnAuthenticated from "./RenderOnAuthenticated";
+import UserService from "~/src/services/UserService";
+import RenderOnRole from "~/src/containers/RenderOnRole";
+import RenderOnAuthenticated from "~/src/containers/RenderOnAuthenticated";
 
 
 const Dashboard = () => {
