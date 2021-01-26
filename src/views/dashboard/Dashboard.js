@@ -25,11 +25,6 @@ const Dashboard = () => {
             <button className="btn btn-success" onClick={UserService.doLogout}>Logout</button>
             </h1>          
           </CRow>
-        </CCardBody>
-      </CCard>
-    </RenderOnAuthenticated>
-      <CCard>
-        <CCardBody>
           <CRow>
             <CCol sm="5">
               <h4 id="traffic" className="card-title mb-0">Traffic</h4>
@@ -54,6 +49,7 @@ const Dashboard = () => {
         </CCardFooter>
      </RenderOnRole>
    </CCard>
+ </RenderOnAuthenticated>
   )
 }
 
