@@ -23,7 +23,7 @@ const Dashboard = () => {
             <h1>
             Welcome {UserService.getUsername()}&nbsp;
             <button className="btn btn-success" onClick={UserService.doLogout}>Logout</button>
-            </h1?          
+            </h1>          
           </CRow>
         </CCardBody>
       </CCard>
