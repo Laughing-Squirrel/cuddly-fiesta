@@ -16,9 +16,10 @@ const initKeycloak = (onAuthenticatedCallback) => {
     .then((authenticated) => {
       // if (authenticated) {
         onAuthenticatedCallback();
-      // } else {
-      //   doLogin();
-      // }
+      } else {
+        console.warn("not authenticated!");
+        doLogin();
+      }
     })
 };
 
