@@ -9,22 +9,10 @@ import {
   CRow
 } from '@coreui/react'
 
-import UserService from "../../services/UserService";
-import RenderOnRole from "../../containers/RenderOnRole";
-import RenderOnAuthenticated from "../../containers/RenderOnAuthenticated";
-
-
 const Dashboard = () => {
   return (
-     <RenderOnAuthenticated>
       <CCard>
         <CCardBody>
-          <CRow>
-            <h1>
-            Welcome {UserService.getUsername()}&nbsp;
-            <button className="btn btn-success" onClick={UserService.doLogout}>Logout</button>
-            </h1>          
-          </CRow>
           <CRow>
             <CCol sm="5">
               <h4 id="traffic" className="card-title mb-0">Traffic</h4>
@@ -32,7 +20,6 @@ const Dashboard = () => {
             </CCol>
           </CRow>
         </CCardBody>
-     <RenderOnRole> 
         <CCardFooter>
           <CRow className="text-center">
             <CCol md sm="12" className="mb-sm-2 mb-0">
@@ -47,9 +34,7 @@ const Dashboard = () => {
             </CCol>
           </CRow>
         </CCardFooter>
-     </RenderOnRole>
-   </CCard>
- </RenderOnAuthenticated>
+      </CCard>
   )
 }
 
