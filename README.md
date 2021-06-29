@@ -5,5 +5,7 @@ docker run -d --name cuddly-fiesta -p 5000:5000 -p 8000:8000 -p 8080:8080 -p 808
 
 Docker build dependency on camunda docker image 
 
+Prereq: database 
+
 To Do:  Create db-env.txt
 
