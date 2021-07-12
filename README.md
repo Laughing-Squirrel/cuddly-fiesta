@@ -9,3 +9,4 @@ Prereq: database
 
 To Do:  Create db-env.txt
 
+Validate transfer sync timing.
