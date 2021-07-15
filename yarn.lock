@@ -1222,6 +1222,11 @@
   resolved "https://registry.yarnpkg.com/@coreui/coreui/-/coreui-4.0.0.tgz#52ebe0197411a829ba48057ade61923e05859eec"
   integrity sha512-8vH6fJrmvCR/Oy5v0E+/1AL3Ygb4jhQ7NXK2fMYWJyK13BePDm9muB3y6S0IdqkpBwjY3hHVwHyt2lJqJdesmQ==
 
+"@coreui/coreui@4.0.1":
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/@coreui/coreui/-/coreui-4.0.1.tgz#e5faf540aeea31b0cc8d428d73080a364e4bc6fd"
+  integrity sha512-1mrWnbqoWb7+8ZAMUdlWt0AqVzDEkJglk7F3OaFsQtxienezFvlMNsd1YPPNo+taRzF7HZ8xSDIAItCvlOaMVg==
+
 "@coreui/icons-react@^2.0.0-rc.0":
   version "2.0.0-rc.0"
   resolved "https://registry.yarnpkg.com/@coreui/icons-react/-/icons-react-2.0.0-rc.0.tgz#5eb4d082a9306c6a2126c61766dcfec503a8a4e1"
@@ -9957,7 +9962,6 @@ sass@^1.35.2:
   version "1.35.2"
   resolved "https://registry.yarnpkg.com/sass/-/sass-1.35.2.tgz#b732314fcdaf7ef8d0f1698698adc378043cb821"
   integrity sha512-jhO5KAR+AMxCEwIH3v+4zbB2WB0z67V1X0jbapfVwQQdjHZUGUyukpnoM6+iCMfsIUC016w9OPKQ5jrNOS9uXw==
-
   dependencies:
     chokidar ">=3.0.0 <4.0.0"
 
