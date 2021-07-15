@@ -10195,6 +10195,7 @@ simple-swizzle@^0.2.2:
   dependencies:
     is-arrayish "^0.3.1"
 
+
 simplebar-react@^2.3.5:
   version "2.3.5"
   resolved "https://registry.yarnpkg.com/simplebar-react/-/simplebar-react-2.3.5.tgz#9d85803d01585f8a4899d45e7e681aef744568c6"
@@ -10207,6 +10208,7 @@ simplebar@^5.3.5:
   version "5.3.5"
   resolved "https://registry.yarnpkg.com/simplebar/-/simplebar-5.3.5.tgz#799d14cdc8bb8ed245789745b9f3741d05403944"
   integrity sha512-mcTlXEiva8pSMdNEzeV3C1KyBHk7Sn2Pe46U1Uwo53dCuQqdJIK0bEJrIPs8W4/RqJquKIsC8Y1h7+aqOl8ccA==
+
   dependencies:
     "@juggle/resize-observer" "^3.3.1"
     can-use-dom "^0.1.0"
